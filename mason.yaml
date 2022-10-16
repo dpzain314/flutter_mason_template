@@ -1,0 +1,13 @@
+bricks:
+  hello: 0.1.0+1
+  new_page:
+    path: flutter_bloc/new_page
+  new_usecase:
+    path: flutter_bloc/new_usecase  
+  # Bricks can also be imported via git url.
+  # Uncomment the following lines to import
+  # a brick from a remote git url.
+  # widget:
+  #   git:
+  #     url: https://github.com/felangel/mason.git
+  #     path: bricks/widget
