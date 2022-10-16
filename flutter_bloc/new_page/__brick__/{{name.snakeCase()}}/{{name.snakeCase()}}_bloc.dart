@@ -1,9 +1,11 @@
 import '../../base/index.dart';
 import 'index.dart';
+import 'package:injectable/injectable.dart';
 
+@injectable
 class {{name.pascalCase()}}Bloc extends BaseBloc<{{name.pascalCase()}}Event, {{name.pascalCase()}}State> {
   {{name.pascalCase()}}Bloc() : super(initState: {{name.pascalCase()}}State()) {
-    on<{{name.pascalCase()}}SampleEvent>(_handle{{name.pascalCase()}}SampleEvent);
+    on<{{name.pascalCase()}}InitEvent>(_handle{{name.pascalCase()}}InitEvent);
   }
 
   @override
@@ -11,6 +13,6 @@ class {{name.pascalCase()}}Bloc extends BaseBloc<{{name.pascalCase()}}Event, {{n
     // TODO: implement dispose
   }
 
-  Future<void> _handle{{name.pascalCase()}}SampleEvent({{name.pascalCase()}}SampleEvent event, Emitter<{{name.pascalCase()}}State> emit) async {
+  Future<void> _handle{{name.pascalCase()}}InitEvent({{name.pascalCase()}}InitEvent event, Emitter<{{name.pascalCase()}}State> emit) async {
   }
 }
