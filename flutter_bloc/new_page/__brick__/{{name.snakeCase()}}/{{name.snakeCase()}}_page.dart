@@ -8,10 +8,10 @@ class {{name.pascalCase()}}Page extends BasePage {
   const {{name.pascalCase()}}Page({Key? key, required PageTag tag}) : super(key: key, tag: tag);
 
   @override
-  State<StatefulWidget> createState() => LoginPageState();
+  State<StatefulWidget> createState() => {{name.pascalCase()}}PageState();
 }
 
-class LoginPageState extends BasePageState<{{name.pascalCase()}}Bloc, {{name.pascalCase()}}Page> {
+class {{name.pascalCase()}}PageState extends BasePageState<{{name.pascalCase()}}Bloc, {{name.pascalCase()}}Page> {
 
   @override
   void initState() {
