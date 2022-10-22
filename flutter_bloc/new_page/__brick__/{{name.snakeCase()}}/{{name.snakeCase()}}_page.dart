@@ -1,6 +1,7 @@
 import '../../../injection.dart';
 import '../../base/index.dart';
 import '../../utils/index.dart';
+import '../../widgets/index.dart';
 import 'index.dart';
 
 
@@ -29,8 +30,10 @@ class {{name.pascalCase()}}PageState extends BasePageState<{{name.pascalCase()}}
     return BlocBuilder<{{name.pascalCase()}}Bloc, {{name.pascalCase()}}State>(
       builder: (context, state) {
         return Scaffold(
-          backgroundColor: Theme.of(context).scaffoldBackgroundColor,
-          body: Container(),
+          body: ProgressHud(
+            inAsyncCall: state.loadingStatus == LoadingStatus.loading,
+            child: Container(),
+            )
         );
       },
     );
